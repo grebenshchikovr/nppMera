@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+ 
+.navigate-menu{
+	background-color: #337ab7;
+	color: #ffffff;
+	font-size: 18px;
+}

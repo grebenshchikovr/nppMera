@@ -12,15 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20170416102424) do
 
-  create_table "devices", force: :cascade do |t|
-    t.string   "name"
-    t.text     "description"
-    t.text     "photo"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  create_table "scanners", force: :cascade do |t|
+  create_table "products", force: :cascade do |t|
     t.text     "name"
     t.string   "description"
     t.string   "photo"
