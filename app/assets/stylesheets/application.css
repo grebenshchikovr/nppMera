@@ -15,20 +15,17 @@
  * text-shadow: 1px 1px 1px #000; color: #ffffff;
  */
 
-.navigate-menu{
-	background-color: rgb(51, 156, 195);
-	color: #ffffff;
-	font-size: 20px;
-	text-align:center; 
-	margin: 0 auto;
+.thumbnails-text {
+display: table-cell;
+min-height: 80px;
+max-width: 260px;
+display: block;
+margin: 0 auto;
+margin-left: auto;
+margin-right: auto;
 }
 
-.navigate-menu a, .navigate-menu a:visited, .navigate-menu a:hover {
-	color: #ffffff;
-	text-decoration: none;
-}
-
-
-.image-align {
-  text-align: center;
+.img-radius {
+	border-radius: 5px;
+	/*box-shadow: 0 0 3px #444; */
 }
