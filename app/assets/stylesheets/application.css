@@ -12,10 +12,23 @@
  *
  *= require_tree .
  *= require_self
+ * text-shadow: 1px 1px 1px #000; color: #ffffff;
  */
- 
+
 .navigate-menu{
-	background-color: #337ab7;
+	background-color: rgb(51, 156, 195);
 	color: #ffffff;
-	font-size: 18px;
+	font-size: 20px;
+	text-align:center; 
+	margin: 0 auto;
+}
+
+.navigate-menu a, .navigate-menu a:visited, .navigate-menu a:hover {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+
+.image-align {
+  text-align: center;
 }

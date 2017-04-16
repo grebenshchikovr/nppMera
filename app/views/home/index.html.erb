@@ -1,26 +1,40 @@
 <!DOCTYPE html>
 <html lang="ru">
-<h1>Home#index</h1>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+
 
 <body>
-<div class="navigate-menu">
-	<div class="row">
-	<div class="clearfix visible-xs-block"></div>
-		
-  		<div class="col-xs-12 col-sm-6 col-md-2">Продукция и услуги</div>
-  		<div class="col-xs-12 col-sm-6 col-md-2">Примеры внедрения</div>
-  		<div class="col-xs-12 col-sm-6 col-md-2">Техническая поддержка</div>
-  		<div class="col-xs-12col-sm-6 col-md-2">О предприятии</div>
-  		<div class="col-xs-12 col-sm-6 col-md-2">Документация</div>
-  		<div class="col-xs-12 col-sm-6 col-md-2">Контакты</div>
-  		
-</div>
-</div>
+<head>
+
+	<div class="container">
+
+		<div class="row"><div class="col-md-12" >
+			<%= image_tag "/images/logos/logomera.png" %>
+			<nav class="navbar navbar-default">
+  				    
+   				<ul class="nav navbar-nav">
+   				<li class="active"><%= link_to 'Главная', home_examples_path %></li>
+				<li><%= link_to 'Продукция и услуги', home_examples_path %></li>
+  				<li><%= link_to 'Примеры внедрения', home_examples_path %></li>
+  				<li><%= link_to 'Техническая поддержка', home_support_path %></li>
+  				<li><%= link_to 'О предприятии', home_about_path %></li>
+  				<li><%= link_to 'Документация', home_docs_path %></li>
+  				<li ><%= link_to 'Контакты', home_contacts_path %></li>
+  				</ul>
+
+  			</nav>
+ 		</div>
+ 	</div>
+</head>
 
 <div class="container">
-<h1>главная</h1>
-   
+
+
+
     
 </div>
 </body>
