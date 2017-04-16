@@ -29,3 +29,13 @@ margin-right: auto;
 	border-radius: 5px;
 	/*box-shadow: 0 0 3px #444; */
 }
+
+.thumbnails-img {
+display: table-cell;
+min-height: 96px;
+max-width: 120px;
+display: block;
+margin: 0 auto;
+margin-left: auto;
+margin-right: auto;
+}
