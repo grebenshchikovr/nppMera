@@ -95,10 +95,13 @@
       						<img class="thumbnails-img" src="<%= product.thumbnail %>" alt="...">
       						<div class="caption">
       							<h4><%= product.title %></h4>
-      							Малогабаритный модульный регистратор сигналов
+      							<%= product.name %>
       							<hr>
       							<ul>
-      								<li>до 128 каналов</li>
+      								<% features = product.feature.split(';') %>
+      								<% features.each do |item|%>
+      									<li><%= item.strip.capitalize %></li>
+      								<% end %>
       							</ul>
       						</div>
     					</div>
