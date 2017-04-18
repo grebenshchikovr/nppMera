@@ -1,0 +1,27 @@
+<h1><%= t('products.product_new') %></h1>
+
+<%= form_for :product, url: products_path do |f| %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :desription %>
+  </p>
+
+  <p>
+    <%= f.label :date %><br />
+    <%= f.text_area :date %>
+  </p>
+  <p>
+    <%= f.label :thumbnail %><br />
+    <%= f.text_area :thumbnail %>
+  </p>
+  
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>

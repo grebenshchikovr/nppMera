@@ -47,7 +47,7 @@ class EventsController < ApplicationController
 
   private
 
-  def direction_params
+  def event_params
     params.require(:event).permit(:title, :content, :date, :thumbnail)
   end
 
