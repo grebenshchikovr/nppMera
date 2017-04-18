@@ -1,6 +1,6 @@
-class CreateApplications < ActiveRecord::Migration[5.0]
+class CreateDirections < ActiveRecord::Migration[5.0]
   def change
-    create_table :applications do |t|
+    create_table :directions do |t|
       t.text :title
       t.text :content
       t.text :thumbnail

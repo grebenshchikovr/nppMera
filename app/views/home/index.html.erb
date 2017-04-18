@@ -33,7 +33,11 @@
 </div>
 
 
-    
+   
+
+
+
+
 
 
 <div class="container">
@@ -42,66 +46,22 @@
   <div class="panel-heading">
     <h3 class="panel-title">Области применения</h3>
   </div>
-  <div class="panel-body">
+	<div class="panel-body">
 
   	
-	<div class="row">
-  		<div class="col-sm-6 col-md-4">
-   			<div class="thumbnail">
-      			<img class="img-radius" src="http://www.nppmera.ru/assets/images/small/145.jpg" alt="...">
-      			<div class="caption">
-      				<p class="thumbnails-text">Информационно-измерительные системы и системы управления для испытания РКД</p>
-      			</div>
-    		</div>
-  		</div>
-
-  		<div class="col-sm-6 col-md-4">
-    		<div class="thumbnail">
-      			<img class="img-radius" src="http://www.nppmera.ru/assets/images/small/146.jpg" alt="...">
-      			<div class="caption">
-      				<p class="thumbnails-text">Стендовые измерительные системы для испытания авиадвигателей</p>
-      			</div>
-    		</div>
-  		</div>
-
-  		<div class="col-sm-6 col-md-4">
-    		<div class="thumbnail">
-      			<img class="img-radius" src="http://www.nppmera.ru/assets/images/small/147.jpg" alt="...">
-      			<div class="caption">
-      				<p class="thumbnails-text">Бортовые распределенные системы сбора и обработки информации при летных испытаниях</p>
-      			</div>
-    		</div>
-  		</div>
-
-  		<div class="col-sm-6 col-md-4">
-    		<div class="thumbnail">
-      			<img class="img-radius" src="http://www.nppmera.ru/assets/images/small/148.jpg" alt="...">
-      			<div class="caption">
-      				<p class="thumbnails-text">Распределенные системы измерений для транспортных испытаний</p>
-      			</div>
-    		</div>
- 		</div>
-
-  		<div class="col-sm-6 col-md-4">
-    		<div class="thumbnail">
-      			<img class="img-radius" src="http://www.nppmera.ru/assets/images/small/149.jpg" alt="...">
-      			<div class="caption">
-      				<p class="thumbnails-text">Системы приема и обработки телеметрической информации</p>
-      			</div>
-    		</div>
-  		</div>
-
-  		<div class="col-sm-6 col-md-4">
-    		<div class="thumbnail">
-      			<img class="img-radius" src="http://www.nppmera.ru/assets/images/small/351.png" alt="...">
-      			<div class="caption">
-      				<p class="thumbnails-text">Информационно-измерительные системы общего назначения</p>
-      			</div>
-    		</div>
-  		</div>
-
+		<div class="row">
+			<% @directions.each do |direction| %>
+  			<div class="col-sm-6 col-md-4">
+   				<div class="thumbnail">
+      				<img class="img-radius" src="<%= direction.thumbnail %>" alt="...">
+      				<div class="caption">
+      					<p class="thumbnails-text"><%= direction.title %></p>
+      				</div>
+    			</div>
+  			</div>
+  			<% end %>
+		</div>
 	</div>
-	  </div>
   
 </div>
 </div>

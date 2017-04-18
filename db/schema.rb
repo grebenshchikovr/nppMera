@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20170416200144) do
 
-  create_table "applications", force: :cascade do |t|
+  create_table "directions", force: :cascade do |t|
     t.text     "title"
     t.text     "content"
     t.text     "thumbnail"
