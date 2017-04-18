@@ -1,4 +1,4 @@
-class ProductController < ApplicationController
+class ProductsController < ApplicationController
 
 before_filter only: [:new, :create]
 
@@ -14,7 +14,7 @@ before_filter only: [:new, :create]
   end
 
   def create
-    @product = Product.new(direction_params)
+    @product = Product.new(product_params)
     
     if @product.save
       redirect_to new_product_path
