@@ -36,7 +36,7 @@
 
   					<div class="col-sm-6 col-md-4">
    						<div class="thumbnail">
-      						<img class="img-radius" src="<%= direction.thumbnail %>" alt="...">
+      						<%= image_tag direction.thumbnail, :alt => "", :class => "img-radius" %>
       						<div class="caption">
       							<p class="thumbnails-text"><%= direction.title %></p>
       						</div>
@@ -63,8 +63,8 @@
 				<div class="media">
  					<div class="media-left media-top">
     					<a href="#">
-      					<img class="media-object" src="<%= event.thumbnail %>" alt="...">
-    					</a>
+    					<%= image_tag event.thumbnail, :alt => "", :class => "media-object" %>
+      					</a>
   					</div>
 
   					<div class="media-body">
@@ -92,7 +92,7 @@
 
   					<div class="col-sm-6 col-md-4">
    						<div class="thumbnail">
-      						<img class="thumbnails-img" src="<%= product.thumbnail %>" alt="...">
+   							<%= image_tag product.thumbnail, :alt => "", :class => "thumbnails-img" %>
       						<div class="caption">
       							<h4><%= product.title %></h4>
       							<%= product.name %>
