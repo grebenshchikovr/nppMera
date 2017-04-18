@@ -33,159 +33,128 @@
 </div>
 
 
-   
+<div class="container">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+    		<h3 class="panel-title">Области применения</h3>
+  		</div>
+		
+		<div class="panel-body">
+			<div class="row">
 
+				<% @directions.each do |direction| %>
 
+  					<div class="col-sm-6 col-md-4">
+   						<div class="thumbnail">
+      						<img class="img-radius" src="<%= direction.thumbnail %>" alt="...">
+      						<div class="caption">
+      							<p class="thumbnails-text"><%= direction.title %></p>
+      						</div>
+    					</div>
+  					</div>
 
-
+  				<% end %>
+			</div>
+		</div>  
+	</div>
+</div>
 
 
 <div class="container">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">События компании</h3>
+  		</div>
+  		<div class="panel-body">
 
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Области применения</h3>
-  </div>
-	<div class="panel-body">
+  			<% @events.each do |event| %>
 
-  	
-		<div class="row">
-			<% @directions.each do |direction| %>
-  			<div class="col-sm-6 col-md-4">
-   				<div class="thumbnail">
-      				<img class="img-radius" src="<%= direction.thumbnail %>" alt="...">
-      				<div class="caption">
-      					<p class="thumbnails-text"><%= direction.title %></p>
-      				</div>
-    			</div>
-  			</div>
-  			<% end %>
-		</div>
+				<div class="media">
+ 					<div class="media-left media-top">
+    					<a href="#">
+      					<img class="media-object" src="<%= event.thumbnail %>" alt="...">
+    					</a>
+  					</div>
+
+  					<div class="media-body">
+  						<h4><%= event.date %></h4>
+  						<p></p>
+    					<h5 class="media-heading"><%= event.title %></h5>
+					</div>
+				</div>
+
+			<% end %>
+	
 	</div>
-  
 </div>
-</div>
-
 
 
 
 <div class="container">
 	<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">События компании</h3>
-  </div>
-  <div class="panel-body">
-	<div class="media">
- 		<div class="media-left media-top">
-    		<a href="#">
-      		<img class="media-object" src="http://www.nppmera.ru/assets/images/small/562.png" alt="...">
-    		</a>
+  		<div class="panel-heading">
+    		<h3 class="panel-title">Новинки продукции</h3>
   		</div>
-  		<div class="media-body">
-    		<h5 class="media-heading">НПП «МЕРА» на Testing & Control 2016</h5>
+  		<div class="panel-body">
+  			<div class="row">
+  				<div class="col-sm-6 col-md-4">
+   					<div class="thumbnail">
+      					<img class="thumbnails-img" src="http://www.nppmera.ru/assets/images/small/329.png" alt="...">
+      						<div class="caption">
+      							<h4>MIC-1150</h4>
+      							Малогабаритный модульный регистратор сигналов
+      							<br>
+      							<hr>
+      							<ul>
+      								<li>до 128 каналов</li>
+      								<br>
+      								<br>
+      							</ul>
+      						</div>
+    					</div>
+  					</div>
+  				</div>
+
+  		
+  				<div class="col-sm-6 col-md-4">
+   					<div class="thumbnail">
+      					<img class="thumbnails-img" src="http://www.nppmera.ru/assets/images/small/329.png" alt="...">
+      						<div class="caption">
+      							<h4>MIC-1150</h4>
+      							Малогабаритный модульный регистратор сигналов
+      							<br>
+      							<hr>
+      							<ul>
+      								<li>до 128 каналов</li>
+      								<br>
+      								<br>
+      							</ul>
+      						</div>
+    					</div>
+  					</div>
+  				</div>
+
+  				<div class="col-sm-6 col-md-4">
+   					<div class="thumbnail">
+      					<img class="thumbnails-img" src="http://www.nppmera.ru/assets/images/small/329.png" alt="...">
+      						<div class="caption">
+      							<h4>MIC-1150</h4>
+      							Малогабаритный модульный регистратор сигналов
+      							<br>
+      							<hr>
+      							<ul>
+      								<li>до 128 каналов</li>
+      								<br>
+      								<br>
+      							</ul>
+      						</div>
+    					</div>
+  					</div>
+  				</div>
 		</div>
 	</div>
-
-	<div class="media">
- 		<div class="media-left media-top">
-    		<a href="#">
-      		<img class="media-object" src="http://www.nppmera.ru/assets/images/small/559.png" alt="...">
-    		</a>
-  		</div>
-  		<div class="media-body">
-    		<h5 class="media-heading">Проведена техническая конференция «Современные системы испытаний» для предприятий, входящих в кооперацию «МИТ»</h5>
-		</div>
-	</div>
-
-	<div class="media">
- 		<div class="media-left media-top">
-    		<a href="#">
-      		<img class="media-object" src="http://www.nppmera.ru/assets/images/small/561.png" alt="...">
-    		</a>
-  		</div>
-  		<div class="media-body">
-    		<h5 class="media-heading">НПП «МЕРА» принимает заседание Правления АССАД</h5>
-		</div>
-	</div>
-
-	<div class="media">
- 		<div class="media-left media-top">
-    		<a href="#">
-      		<img class="media-object" src="http://www.nppmera.ru/assets/images/small/557.png" alt="...">
-    		</a>
-  		</div>
-  		<div class="media-body">
-    		<h5 class="media-heading">НПП «МЕРА» на выставке ILA Berlin Air Show</h5>
-		</div>
-	</div>
-	</div>
-	</div>
-</div>
-
-<div class="container">
-
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Новинки продукции</h3>
-  </div>
-  <div class="panel-body">
-
-  	
-	<div class="row">
-  		<div class="col-sm-6 col-md-4">
-   			<div class="thumbnail">
-      			<img class="thumbnails-img" src="http://www.nppmera.ru/assets/images/small/329.png" alt="...">
-      			<div class="caption">
-      				<h4>MIC-1150</h4>
-      				Малогабаритный модульный регистратор сигналов
-      				<br>
-      				<hr>
-      				<ul>
-      				<li>до 128 каналов</li>
-      				<br>
-      				<br>
-      				</ul>
-      			</div>
-    		</div>
-  		</div>
-
-  		<div class="col-sm-6 col-md-4">
-   			<div class="thumbnail">
-      			<img class="thumbnails-img" src="http://www.nppmera.ru/assets/images/small/514.png" alt="...">
-      			<div class="caption">
-      				<h4>MIC-1170</h4>
-      				Внешний измерительный модуль
-      				<br>
-      				<br>
-      				<hr>
-      				<ul>
-      				<li>4 канала</li>
-      				<br>
-      				<br>
-      				</ul>
-      			</div>
-    		</div>
-  		</div>
-
-  		<div class="col-sm-6 col-md-4">
-   			<div class="thumbnail">
-      			<img class="thumbnails-img" src="http://www.nppmera.ru/assets/images/small/69.png" alt="...">
-      			<div class="caption">
-      				<h4>MIC-355M<br></h4>
-      				Переносной регистратор-анализатор динамических параметров
-      				<hr>
-      				<ul>
-      				<li>6 слотов (24 аналоговых канала)</li>
-      				<li>частота дискретизации до 216 кГц/канал при разрешении 24 бит</li>
-      				</ul>
-      			</div>
-    		</div>
-  		</div>
-
-	</div>
-	  </div>
   
-</div>
+
 </div>
 
 
