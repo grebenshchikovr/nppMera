@@ -36,7 +36,7 @@
 
   					<div class="col-sm-6 col-md-4">
    						<div class="thumbnail">
-      						<%= image_tag direction.thumbnail, :alt => "", :class => "img-radius" %>
+      						<%= link_to "#{image_tag(direction.thumbnail, :alt => "", :class => "img-radius")}".html_safe,direction_path(direction) %>
       						<div class="caption">
       							<p class="thumbnails-text"><%= direction.title %></p>
       						</div>
@@ -62,9 +62,9 @@
 
 				<div class="media">
  					<div class="media-left media-top">
-    					<a href="#">
-    					<%= image_tag event.thumbnail, :alt => "", :class => "media-object" %>
-      					</a>
+    					
+    					<%= link_to "#{image_tag(event.thumbnail, :alt => "", :class => "media-object")}".html_safe, event_path(event)  %>
+    					      					
   					</div>
 
   					<div class="media-body">
@@ -93,8 +93,8 @@
 
   					<div class="col-sm-6 col-md-4">
    						<div class="thumbnail">
-   							<%= image_tag product.thumbnail, :alt => "", :class => "thumbnails-img" %>
-      						<div class="caption">
+   							<%= link_to "#{image_tag(product.thumbnail, :alt => "", :class => "thumbnails-img")}".html_safe,product_path(product)  %>
+   							<div class="caption">
       							<h4><%= product.title %></h4>
       							<%= product.name %>
       							<hr>
