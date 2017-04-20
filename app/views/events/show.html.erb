@@ -1,5 +1,14 @@
-<h1><%= @event.title %></h1>
-<p>
-	<%= @event.date %>
-	<%= @event.content %>
-</p>
+
+
+<div class="container">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title"><%= @event.date %> <%= @event.title %></h3>
+  		</div>
+  		<div class="panel-body">
+
+  			<%= render :file => "public/events_html/#{@event.content}" %>
+			
+		</div>	
+	</div>
+</div>
