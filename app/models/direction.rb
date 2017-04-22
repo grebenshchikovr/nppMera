@@ -1,5 +1,5 @@
 class Direction < ApplicationRecord
-  def subject
-    title
-  end
+ #def subject
+  #  title
+  #end
 end
