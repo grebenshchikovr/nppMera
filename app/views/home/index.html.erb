@@ -1,3 +1,76 @@
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<div class="container">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+    		<h3 class="panel-title">Новинки продукции</h3>
+  		</div>
+		
+		<div class="panel-body">
+
+			<div style="margin-top: 20px; margin-bottom: 20px;">
+			<div id="Carousel" class="carousel slide" data-interval="3000" data-ride="carousel" style="margin-top: 20px;">
+
+
+				<ol class="carousel-indicators">
+   					<% @products.each_with_index do |product, n| %>
+     				<li data-target='#Carousel' data-slide-to="#{n}" class="#{'active' if n == 0}"></li>
+   					<% end %>
+				</ol>
+
+				<div class="carousel-inner" role="listbox">
+    				<div class="item active" style="background: #ffffff; height: 300px !important;">
+    				<table class="carousel-table">
+    
+    				<tr><td><%= link_to "#{image_tag(@products.first.thumbnail, :alt => "", :class => "carousel-img")}".html_safe,product_path(@products.first)  %>
+    				</td><td>
+        				<h4><%= @products.first.title %></h4>
+      						<%= @products.first.name %>
+      							
+      						<ul>
+      								<% features = @products.first.feature.split(';') %>
+      								<% features.each do |item|%>
+      									<li><%= item.strip.capitalize %></li>
+      								<% end %>
+      							</ul>
+     				</td></tr>
+    				</table>
+    				</div>
+  				
+
+
+  			<% @products.drop(1).each do |product| %>
+     			<div class="item" style="background: #ffffff; height: 300px !important;">
+   				<table class="carousel-table">
+       			<tr><td><%= link_to "#{image_tag(product.thumbnail, :alt => "", :class => "carousel-img")}".html_safe,product_path(product)  %>
+    			</td><td>
+        			<h4><%= product.title %></h4>
+      							<%= product.name %>
+      							
+      							<ul>
+      								<% features = product.feature.split(';') %>
+      								<% features.each do |item|%>
+      									<li><%= item.strip.capitalize %></li>
+      								<% end %>
+      							</ul>
+     			</td></tr>
+    			</table>
+     			</div>
+  			<% end %>
+	
+  		</div>
+		<!-- Carousel nav -->
+  		<a class="carousel-control left" href="#Carousel" data-slide="prev">
+    	<span class="glyphicon glyphicon-chevron-left"></span></a>
+  		<a class="carousel-control right" href="#Carousel" data-slide="next">
+    	<span class="glyphicon glyphicon-chevron-right"></span></a>
+    	</div>
+    	</div>
+  </div>
+  </div>
+  </div>
+
 <div class="container">
 	<div class="panel panel-default">
 		<div class="panel-heading">
@@ -51,39 +124,4 @@
 			
 		</div>	
 	</div>
-</div>
-
-
-<div class="container">
-	<div class="panel panel-default">
-  		<div class="panel-heading">
-    		<h3 class="panel-title">Новинки продукции</h3>
-  		</div>
-  		<div class="panel-body">
-  			<div class="row">
-
-  				<% @products.each do |product| %>
-
-  					<div class="col-sm-6 col-md-4">
-   						<div class="thumbnail">
-   							<%= link_to "#{image_tag(product.thumbnail, :alt => "", :class => "thumbnails-img")}".html_safe,product_path(product)  %>
-   							<div class="caption">
-      							<h4><%= product.title %></h4>
-      							<%= product.name %>
-      							<hr>
-      							<ul>
-      								<% features = product.feature.split(';') %>
-      								<% features.each do |item|%>
-      									<li><%= item.strip.capitalize %></li>
-      								<% end %>
-      							</ul>
-      						</div>
-    					</div>
-  					</div>
-  				
-  				<% end %>
-
-  			</div>
-		</div>
-  	</div>
 </div>

@@ -39,3 +39,17 @@ margin: 0 auto;
 margin-left: auto;
 margin-right: auto;
 }
+
+.carousel-table {
+vertical-align: center;
+height: 298px;
+margin-left: 20px;
+margin-right: 20px;
+border: 0
+}
+
+.carousel-img {
+display: block;
+max-height: 298px;
+max-width: 600px;
+}
