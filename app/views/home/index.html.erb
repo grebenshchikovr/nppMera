@@ -10,42 +10,16 @@
 		<div class="panel-body">
 
 			<div style="margin-top: 20px; margin-bottom: 20px;">
-			<div id="Carousel" class="carousel slide" data-interval="3000" data-ride="carousel" style="margin-top: 20px;">
+			<div id="Carousel" class="carousel slide" data-interval="5000" data-ride="carousel" style="margin-top: 20px;">
+				
+			<div class="carousel-inner" role="listbox">
 
-
-				<ol class="carousel-indicators">
-   					<% @products.each_with_index do |product, n| %>
-     				<li data-target='#Carousel' data-slide-to="#{n}" class="#{'active' if n == 0}"></li>
-   					<% end %>
-				</ol>
-
-				<div class="carousel-inner" role="listbox">
-    				<div class="item active" style="background: #ffffff; height: 300px !important;">
-    				<table class="carousel-table">
-    
-    				<tr><td><%= link_to "#{image_tag(@products.first.thumbnail, :alt => "", :class => "carousel-img")}".html_safe,product_path(@products.first)  %>
-    				</td><td>
-        				<h4><%= @products.first.title %></h4>
-      						<%= @products.first.name %>
-      							
-      						<ul>
-      								<% features = @products.first.feature.split(';') %>
-      								<% features.each do |item|%>
-      									<li><%= item.strip.capitalize %></li>
-      								<% end %>
-      							</ul>
-     				</td></tr>
-    				</table>
-    				</div>
-  				
-
-
-  			<% @products.drop(1).each do |product| %>
-     			<div class="item" style="background: #ffffff; height: 300px !important;">
+  			<% @products.each_with_index do |product, n| %>
+     			<div class="item <%= n==0 ? ' active' : '' %>" style="background: #ffffff; height: 300px !important;">
    				<table class="carousel-table">
-       			<tr><td><%= link_to "#{image_tag(product.thumbnail, :alt => "", :class => "carousel-img")}".html_safe,product_path(product)  %>
-    			</td><td>
-        			<h4><%= product.title %></h4>
+       			<tr><td class="carousel-td"><%= link_to "#{image_tag(product.thumbnail, :alt => "", :class => "carousel-img")}".html_safe,product_path(product)  %>
+    			</td><td class="carousel-td">
+        			<h2><%= link_to "#{product.title}".html_safe,product_path(product) %></h2>
       							<%= product.name %>
       							
       							<ul>

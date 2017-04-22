@@ -42,10 +42,15 @@ margin-right: auto;
 
 .carousel-table {
 vertical-align: center;
-height: 298px;
-margin-left: 20px;
-margin-right: 20px;
-border: 0
+height: 300px;
+border: 0px solid black;
+}
+.carousel-td {
+vertical-align: center;
+height: 300px;
+padding: 10px;
+padding-left: 20px;
+border: 0px solid black;
 }
 
 .carousel-img {
@@ -53,3 +58,4 @@ display: block;
 max-height: 298px;
 max-width: 600px;
 }
+
