@@ -1,0 +1,24 @@
+<div class="container">
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#about" aria-controls="about" role="tab" data-toggle="tab">О предприятии</a></li>
+    <li role="presentation"><a href="#history" aria-controls="history" role="tab" data-toggle="tab">История создания</a></li>
+    <li role="presentation"><a href="#serts" aria-controls="serts" role="tab" data-toggle="tab">Сертификаты и лицензии</a></li>
+    <li role="presentation"><a href="#partners" aria-controls="partners" role="tab" data-toggle="tab">Заказчики и партнеры</a></li>
+    <li role="presentation"><a href="#hunt" aria-controls="hunt" role="tab" data-toggle="tab">Вакансии</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane fade in active" id="about"><%= render :file => "public/about/about_company.html" %></div>
+    <div role="tabpanel" class="tab-pane fade" id="history"><%= render :file => "public/about/history.html" %></div>
+    <div role="tabpanel" class="tab-pane fade" id="serts"><%= render :file => "public/about/serts.html" %></div>
+    <div role="tabpanel" class="tab-pane fade" id="partners"><%= render :file => "public/about/partners.html" %></div>
+    <div role="tabpanel" class="tab-pane fade" id="hunt"><%= render :file => "public/about/hunt.html" %></div>
+  </div>
+
+</div>
+
+ 
+
