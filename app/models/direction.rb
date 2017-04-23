@@ -1,5 +1,5 @@
 class Direction < ApplicationRecord
- #def subject
-  #  title
-  #end
+
+  has_many :examples
+
 end

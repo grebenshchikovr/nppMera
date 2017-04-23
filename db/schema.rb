@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170418211006) do
+ActiveRecord::Schema.define(version: 20170423135203) do
 
   create_table "directions", force: :cascade do |t|
     t.text     "title"
@@ -27,6 +27,15 @@ ActiveRecord::Schema.define(version: 20170418211006) do
     t.text     "thumbnail"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "examples", force: :cascade do |t|
+    t.text     "title"
+    t.text     "content"
+    t.integer  "direction_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["direction_id"], name: "index_examples_on_direction_id"
   end
 
   create_table "products", force: :cascade do |t|
