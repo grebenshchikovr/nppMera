@@ -1,0 +1,30 @@
+
+
+
+<div class="container">
+
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+	<% @standarts.each do |standart| %>
+
+  
+
+
+          <%= standart.title %>
+          <%= standart.description %>
+        
+        
+		<% standart.products.each do |product| %>
+		<p>
+		<%= product.title %>	
+		</p>
+		<% end %>
+
+      </div>
+    </div>
+  </div>
+
+<% end %>
+
+</div>
+</div>
